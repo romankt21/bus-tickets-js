@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus tickets</title>
+
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+  <h1>Bus tickets icon</h1>
+    <form class="form" id="submit" onsubmit={handleSubmit}>
+        <h2>Registration for trips</h2>
+        <label for="Name">First Name:</label>
+        <input type="text" class="form-input name"  name="First_Name" placeholder="First Name" value="" required>
+
+        <input type="text" class=" form-input name" name="Last_Name" placeholder="Last name">
+
+        <input type="text" class="form-input" name="Start_Station" placeholder="Start station" >
+        <select class="form-input" name="Start_Station"  id="Start_Station">
+            <option value="" disabled="disabled" selected="selected">Select start station</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Ternopil">Ternopil</option>
+            <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+        </select>
+
+
+
+        <input class="form-input" name="End_Station" placeholder="End station" >
+        <input type="date" class="form-input" name="Date_trip" placeholder="Date trip" >
+        
+        <input type="number" class="form-input" name= "Seat_Number" placeholder="seatNumber:" >
+        <label for="">Have pet:</label>
+        <input type="checkbox" id="pet" placeholder="movie with pet"  class="form-input checkbox" >
+        <label for="">Have baggage:</label>
+        <input type="checkbox" id="baggage" placeholder="have plus baggage?"  class="form-input checkbox" >
+        <select name="exemption" id="exemption">
+
+            <option value="" disabled="disabled" selected="selected">Select from the options...</option>
+            <option value="10%">Studend</option>
+            <option value="12%">Pensioner</option>
+            <option value="15%">disablement</option>
+        </select>
+
+        <button type="submit" class="form-submit"  >Submit</button>
+    </form>
+    <div class="cloud" id="cloud">
+    </div>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
