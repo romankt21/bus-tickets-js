@@ -25,9 +25,11 @@ function handleSubmit(event) {
         id: 1243646,  // unique id
         firstName: submit.First_Name.value,
         lasttName: submit.Last_Name.value,
-        start: submit.Start_Station.value,
-        end: submit.End_Station.value,
+        start: document.getElementById('Start_Station').value,
+        end: document.getElementById('End_Station').value,
+
         date: submit.Date_trip.date,
+        date1: document.getElementById('Date_trip').date,
         seatNumber: submit.Seat_Number.value,
         baggage: document.getElementById('baggage').checked,
         pet: document.getElementById('pet').checked,

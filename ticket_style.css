@@ -1,0 +1,12 @@
+
+
+.grey {
+    color: grey
+}
+
+.route {
+    height: 300px;
+    width: 150px;
+    border: solid 2px gray;
+    border-radius: 10px;
+}
