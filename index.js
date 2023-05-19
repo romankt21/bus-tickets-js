@@ -28,9 +28,9 @@ function handleSubmit(event) {
         start: document.getElementById('Start_Station').value,
         end: document.getElementById('End_Station').value,
 
-        date: submit.Date_trip.date,
+        date: submit.Date_trip.value,
         date1: document.getElementById('Date_trip').date,
-        seatNumber: submit.Seat_Number.value,
+        seatNumber: submit.Passenger.value,
         baggage: document.getElementById('baggage').checked,
         pet: document.getElementById('pet').checked,
         exemption: document.getElementById('exemption').value
@@ -39,5 +39,9 @@ function handleSubmit(event) {
 
     alert('Good luck!');
 };
+
+
+const today = new Date();
+console.log("today ", today );
 
 

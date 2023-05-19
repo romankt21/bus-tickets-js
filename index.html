@@ -5,44 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus tickets</title>
+    <title>Bus tickets <i class="bi bi-bus-front-fill"></i></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.cdnfonts.com/css/dhaniel" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
    
 </head>
 
 <body>
-  <h1>Bus tickets icon</h1>
+  <h1>Bus tickets <i class="bi bi-bus-front-fill"></i></h1>
     <form class="form" id="submit" onsubmit={handleSubmit}>
         <h2>Registration for trips</h2>
-        <label for="Name">First Name:</label>
+        <!-- <input type="text" class="form-input" name="Start_Station" placeholder="Start station" > -->
+        
+        <div class="station">
+            <select class="form-input" name="Start_Station"  id="Start_Station" placeholder="From">
+                <option value="" disabled="disabled" selected="selected">Select start station</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Kyiv">Kyiv</option>
+                <option value="Ternopil">Ternopil</option>
+                <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+            </select>
+            <button class="reverse"><i class="bi bi-arrow-left-right"></i></button>
+
+        <!-- <input class="form-input" name="End_Station" placeholder="End station" > -->
+            <select class="form-input" name="End_Station"  id="End_Station">
+                <option value="" disabled="disabled" selected="selected">Select end station</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Kyiv">Kyiv</option>
+                <option value="Ternopil">Ternopil</option>
+                <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+         </select>
+
+         <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-12" value="2023-05-12">
+         
+         <input type="number" class="form-input" name= "Passenger" placeholder="Passenger:" >
+         <button type="submit" class="form-submit"  >Submit</button>
+         
+        </div>
+        <label for="">Return way</label>
+        <input type="checkbox" >
+
+        <div class="station back" style="display: none;">
+            <select class="form-input" name="Start_Station"  id="Start_Station" placeholder="From">
+                <option value="" disabled="disabled" selected="selected">Select start station</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Kyiv">Kyiv</option>
+                <option value="Ternopil">Ternopil</option>
+                <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+            </select>
+            <button class="reverse"><i class="bi bi-arrow-left-right"></i></button>
+
+        <!-- <input class="form-input" name="End_Station" placeholder="End station" > -->
+            <select class="form-input" name="End_Station"  id="End_Station">
+                <option value="" disabled="disabled" selected="selected">Select end station</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Kyiv">Kyiv</option>
+                <option value="Ternopil">Ternopil</option>
+                <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+         </select>
+
+         <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-12" value="2023-05-12">
+         
+         <input type="number" class="form-input" name= "Passenger" placeholder="Passenger:" >
+ 
+         
+        </div>
+        
+
+       
+        <label for="Name">First Name: <i class="bi bi-person-bounding-box"></i></label>
         <input type="text" class="form-input name"  name="First_Name" placeholder="First Name" value="" required>
 
         <input type="text" class=" form-input name" name="Last_Name" placeholder="Last name">
 
-        <!-- <input type="text" class="form-input" name="Start_Station" placeholder="Start station" > -->
-        <select class="form-input" name="Start_Station"  id="Start_Station">
-            <option value="" disabled="disabled" selected="selected">Select start station</option>
-            <option value="Lviv">Lviv</option>
-            <option value="Kyiv">Kyiv</option>
-            <option value="Ternopil">Ternopil</option>
-            <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
-        </select>
-
-
-
-        <!-- <input class="form-input" name="End_Station" placeholder="End station" > -->
-        <select class="form-input" name="End_Station"  id="End_Station">
-            <option value="" disabled="disabled" selected="selected">Select end station</option>
-            <option value="Lviv">Lviv</option>
-            <option value="Kyiv">Kyiv</option>
-            <option value="Ternopil">Ternopil</option>
-            <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
-        </select>
-
-        <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-12">
         
-        <input type="number" class="form-input" name= "Seat_Number" placeholder="seatNumber:" >
+        <hr>--------------------------------------------------</hr>
+
+        <div class="bus-place">
+            <h1 class="bus-place">Виберіть місце на схемі автобуса</h1>
+            <h2 class="bus-place">Автобус:</h2>
+            <h2 class="bus-place">Сетра [ВХ2826ЕХ]</h2>
+
+            <div class="seat">
+                <div class="free-seat"></div>
+                <h3 class="seat">-вільне</h3>
+                <div class="occupied-seat"></div>
+                <h3 class="seat">-зайняте</h3>
+            </div>
+
+
+            <div class="bus">
+
+                <div class="free-seat"></div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+        
+        
+        <hr>--------------------------------------------------</hr>
         <label for="">Have pet:</label>
         <input type="checkbox" id="pet" placeholder="movie with pet"  class="form-input checkbox" >
         <label for="">Have baggage:</label>
@@ -55,7 +125,7 @@
             <option value="15%">disablement</option>
         </select>
 
-        <button type="submit" class="form-submit"  >Submit</button>
+       
     </form>
     <div class="cloud" id="cloud">
     </div>

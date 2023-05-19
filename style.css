@@ -7,17 +7,20 @@ body {
     text-align: center;
     margin: auto;
 
+
 }
 h1 {
     color: yellow;
     text-align: start;
     width: 100%;
+    font-family: 'Dhaniel', sans-serif;
+   padding-left: 50px;
     }
 
 .form {
   background-color: white;
   min-height: 500px;
-  width: 400px;
+  width: 800px;
   display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,12 +30,13 @@ h1 {
     border-radius: 5px;
   
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    margin: 5px;
     gap: 9%;
 }
 
+.station {
+  display: flex;
+}
 
 .input-name {
   width: 40%;
@@ -43,11 +47,9 @@ h1 {
 
 
 .form-input {
-    
     width: 100%;
     padding: 10px;
     margin: 20px;
- 
     border: solid 1px lightgrey;
 }
 
@@ -57,13 +59,10 @@ h1 {
 
 .name {
   width: 50%;
- 
 }
 
-
-
 .form-submit {
-  background-color: rgb(231, 146, 0);
+  background-color: rgb(254, 204, 5);
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -72,6 +71,16 @@ h1 {
   
 }
 
+.form-submit:hover {
+  background-color: rgb(251, 227, 73);
+  cursor: pointer;
+
+}
+
+.reverse {
+border-style: none;
+background: transparent;
+}
 
 .cloud {
     position: absolute; 
@@ -87,6 +96,48 @@ h1 {
     -webkit-filter: blur(6px); 
    
 }
+
+ .bus-place {
+  color: black
+}
+
+.bus-place h2{
+display: inline-block;
+color: grey;
+}
+
+.seat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.bus-place h2 + h2{
+  display: inline-block;
+  color: black;
+  }
+
+.free-seat {
+  height: 20px;
+  width: 20px;
+  border: solid 2px green;
+  border-radius: 5px;
+}
+
+.occupied-seat {
+  height: 20px;
+  width: 20px;
+  background: grey;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+
+
+
 
 #cloud {
   background: rgba(255, 255, 255);
