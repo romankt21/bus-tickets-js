@@ -123,6 +123,7 @@ color: grey;
   width: 20px;
   border: solid 2px green;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .occupied-seat {
@@ -132,6 +133,14 @@ color: grey;
   border: none;
   border-radius: 5px;
 }
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
 
 
 
