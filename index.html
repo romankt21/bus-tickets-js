@@ -30,7 +30,7 @@
             <button class="reverse"><i class="bi bi-arrow-left-right"></i></button>
 
         <!-- <input class="form-input" name="End_Station" placeholder="End station" > -->
-            <select class="form-input" name="End_Station"  id="End_Station">
+            <select class="form-input" name="End_Station"  id="End_Station" placeholder="From">
                 <!-- <option value="" disabled="disabled" selected="selected">Select end station</option>
                 <option value="Lviv">Lviv</option>
                 <option value="Kyiv">Kyiv</option>
@@ -47,7 +47,7 @@
         <label for="">Return way</label>
         <input type="checkbox" >
 
-        <div class="station back" style="display: none;">
+        <!-- <div class="station back" style="display: none;">
             <select class="form-input" name="Start_Station"  id="Start_Station" placeholder="From">
                 <option value="" disabled="disabled" selected="selected">Select start station</option>
                 <option value="Lviv">Lviv</option>
@@ -55,18 +55,18 @@
                 <option value="Ternopil">Ternopil</option>
                 <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
             </select>
-            <button class="reverse"><i class="bi bi-arrow-left-right"></i></button>
+            <button class="reverse"><i class="bi bi-arrow-left-right"></i></button> -->
 
         <!-- <input class="form-input" name="End_Station" placeholder="End station" > -->
-            <select class="form-input" name="End_Station"  id="End_Station">
+            <!-- <select class="form-input" name="End_Station"  id="End_Station">
                 <option value="" disabled="disabled" selected="selected">Select end station</option>
                 <option value="Lviv">Lviv</option>
                 <option value="Kyiv">Kyiv</option>
                 <option value="Ternopil">Ternopil</option>
                 <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
-         </select>
+         </select> -->
 
-         <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-12" value="2023-05-12">
+         <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-30" value="2023-05-30">
          
          <input type="number" class="form-input" name= "Passenger" placeholder="Passenger:" >
  
@@ -88,34 +88,64 @@
             <h2 class="bus-place">Автобус:</h2>
             <h2 class="bus-place">Сетра [ВХ2826ЕХ]</h2>
 
-            <div class="seat">
+            <div class="discription-place">
                 <div class="free-seat"></div>
-                <h3 class="seat">-вільне</h3>
+                <p class="place">-вільне</p>
+                <label for="" class="labplace">вільн</label>
                 <div class="occupied-seat"></div>
-                <h3 class="seat">-зайняте</h3>
+                <p class="place">-зайняте</p>
             </div>
 
 
-            <div class="bus">
-                <div class="row">
-                    <div class="seat reserved">1</div>
-                    <div class="seat">2</div>
-                    <div class="seat">3</div>
-                    <div class="free-seat">4</div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
-                    <div class="free-seat"></div>
+            <div class="bus-chair">
+                <div class="row12w">
+                    <div class="bus-chair-row12">
+                        <div class="seat reserved">1</div>
+                        <div class="seat reserved">2</div>
+                        <div class="seat reserved">3</div>
+                        <div class="seat reserved">4</div>
+                        <div class="seat reserved">5</div>
+                        <div class="seat reserved">6</div>
+                        <div class="seat reserved">7</div>
+                        <div class="seat reserved">8</div>
+                        <div class="seat reserved">9</div>
+                        <div class="seat reserved">10</div>
+                        <div class="seat reserved">11</div>
+                        <div class="seat reserved">12</div>
+                    </div>    
+               
 
+                    <img src = car_wheel.png class = " wheel" alt = " wheel" width="50px" height="50px">
+                 </div>
+
+                <div class="bus-chair-row12">
+                    <button type="submit" class="seat reserved">13</button>
+                    <button type="submit" class="seat reserved">14</button>
+                    <button type="submit" class="seat reserved">15</button>
+                    <button type="submit" class="seat reserved">16</button>
+                    <button type="submit" class="seat reserved">17</button>
+                    <button type="submit" class="seat reserved">18</button>
+                    <button type="submit" class="seat reserved">19</button>
+                    <button type="submit" class="seat reserved">20</button>
+                    <button type="submit" class="seat reserved">21</button>
+                    <button type="submit" class="seat reserved">22</button>
+                    <button type="submit" class="seat reserved">23</button>
+                    <button type="submit" class="seat reserved">24</button>
+                    <div class="seat reserved">13</div>
+                    <div class="seat reserved">14</div>
+                    <div class="seat reserved">15</div>
+                    <div class="seat reserved">16</div>
+                    <div class="seat reserved">17</div>
+                    <div class="seat reserved">18</div>
+                    <div class="seat reserved">19</div>
+                    <div class="seat reserved">20</div>
+                    <div class="seat reserved">21</div>
+                    <div class="seat reserved">22</div>
+                    <div class="seat reserved">23</div>
+                    <div class="seat reserved">24</div>
                 </div>
 
-                
+            </div>    
 
 
 
@@ -127,9 +157,18 @@
 
 
 
+
+
+
+
+
         
         
         <hr>--------------------------------------------------</hr>
+
+        
+
+
         <label for="">Have pet:</label>
         <input type="checkbox" id="pet" placeholder="movie with pet"  class="form-input checkbox" >
         <label for="">Have baggage:</label>

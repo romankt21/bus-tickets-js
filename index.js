@@ -1,18 +1,29 @@
 let submit = document.forms.submit; // find element 
 const dateInput = document.getElementById("Date_trip");
 const selectStation = document.getElementById("Start_Station");
+const selectEndStation = document.getElementById("End_Station");
 
 
 
 
 const today = new Date().toISOString().split('T')[0];
-// console.log("today ", today );
+console.log("today ", today );
 
 dateInput.setAttribute('min', today);
 
-// dateInput.setAttribute('max', today);
+const rToday = Date.parse(new Date());
+console.log(rToday)
+const maxDate = rToday + 24 * 10 * 60 * 60 * 1000
+console.log(maxDate)
 
-// console.log("dateInput.setAttribute", dateInput.setAttribute);
+console.log("maxDate ", maxDate );
+const maxDate1 = (new Date(maxDate))
+const maxDate2 = maxDate1.toISOString().split('T')[0];
+console.log("maxDate ", maxDate2 );
+
+dateInput.setAttribute('max', maxDate2);
+
+
 
 submit.addEventListener('submit', handleSubmit); //listener events
 
@@ -96,7 +107,6 @@ const stationsDB =  [
 ];
 
 for(let station of stationsDB){
-    console.log(station.city);
     const option = document.createElement('option')
 
     option.value = station.city;
@@ -104,5 +114,21 @@ option.textContent = `${station.city},${station.country} `;
     selectStation.appendChild(option);
 }
 
+
+
+
+for(let stationEnd of stationsDB){
+    const optionEnd = document.createElement('option')
+
+
+    optionEnd.value = stationEnd.city;
+    optionEnd.textContent = `${stationEnd.city},${stationEnd.country} `;
+
+
+
+    selectEndStation.appendChild(optionEnd);
+    // console.log(selectEndStation)
+
+}
 
 

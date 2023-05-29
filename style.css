@@ -98,7 +98,15 @@ background: transparent;
 }
 
  .bus-place {
-  color: black
+  color: black;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+
 }
 
 .bus-place h2{
@@ -106,16 +114,18 @@ display: inline-block;
 color: grey;
 }
 
-.seat {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
 .bus-place h2 + h2{
   display: inline-block;
   color: black;
+  }
+
+
+  .discription-place {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
   }
 
 .free-seat {
@@ -123,7 +133,7 @@ color: grey;
   width: 20px;
   border: solid 2px green;
   border-radius: 5px;
-  padding: 10px;
+  
 }
 
 .occupied-seat {
@@ -134,6 +144,15 @@ color: grey;
   border-radius: 5px;
 }
 
+.place {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.labplace{
+  color: red;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -141,7 +160,42 @@ color: grey;
   padding: 50px;
 }
 
+.bus-chair {
+  border: gray solid 2px;
+  height: 300px;
+  width: 600px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.row12w {
+  display: flex;
+  background-color: yellow;
+  
+}
+.bus-chair-row12 {
+  
+  background-color: aqua;
+  height: 100px;
+  width: 500px;
+  
+  margin: 20px;
 
+  display: grid;
+  grid-template: repeat(2, 1fr)/ repeat(6, 0.1fr);
+  grid-gap: 10px;
+
+}
+
+.wheel {
+  /* display: block; */
+  margin-top: 20px;
+}
+
+
+.seat {
+  border: green solid 2px;
+  border-radius: 10px;
+}
 
 
 
