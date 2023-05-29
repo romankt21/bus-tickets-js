@@ -1,7 +1,32 @@
-let submit = document.forms.submit; // find element 
+// let submit = document.forms.submit; // find element 
+let submit = document.getElementById("submit"); 
 const dateInput = document.getElementById("Date_trip");
 const selectStation = document.getElementById("Start_Station");
 const selectEndStation = document.getElementById("End_Station");
+let seat_13 = document.getElementById("seat_13")
+let seat_14 = document.getElementById("seat_14")
+
+seat_13.addEventListener('click', seat13)
+seat_14.addEventListener('click', seat14)
+
+
+const arrayOccupiedSeat = [];
+
+
+
+function seat13() {
+    console.log("occupied seat 13")
+    arrayOccupiedSeat.push(13)
+}
+
+function seat14() {
+    console.log("occupied seat 14")
+    arrayOccupiedSeat.push(14)
+}
+
+
+
+console.log(arrayOccupiedSeat)
 
 
 
@@ -14,7 +39,6 @@ dateInput.setAttribute('min', today);
 const rToday = Date.parse(new Date());
 console.log(rToday)
 const maxDate = rToday + 24 * 10 * 60 * 60 * 1000
-console.log(maxDate)
 
 console.log("maxDate ", maxDate );
 const maxDate1 = (new Date(maxDate))
@@ -27,32 +51,32 @@ dateInput.setAttribute('max', maxDate2);
 
 submit.addEventListener('submit', handleSubmit); //listener events
 
-const passengers = [
-    {
-    id: 1324343434,
-    firstName: "Roman",
-    lasttName: "Kutnyi",
-    start: "Lviv",
-    end: "Praga",
-    date: "21.06.23",
-    seatNumber: 47,
-    baggage: true,
-    pet: false,
-    exemption: ""
-},
-{
-    id: 1324343400,
-    firstName: "Roman",
-    lasttName: "Kutnyi",
-    start: "Lviv",
-    end: "Praga",
-    date: "21.06.23",
-    seatNumber: 46,
-    baggage: true,
-    pet: false,
-    exemption: ""
-}
-];
+// const passengers = [
+//     {
+//     id: 1324343434,
+//     firstName: "Roman",
+//     lasttName: "Kutnyi",
+//     start: "Lviv",
+//     end: "Praga",
+//     date: "21.06.23",
+//     seatNumber: 47,
+//     baggage: true,
+//     pet: false,
+//     exemption: ""
+// },
+// {
+//     id: 1324343400,
+//     firstName: "Roman",
+//     lasttName: "Kutnyi",
+//     start: "Lviv",
+//     end: "Praga",
+//     date: "21.06.23",
+//     seatNumber: 46,
+//     baggage: true,
+//     pet: false,
+//     exemption: ""
+// }
+// ];
 
 
 const seatNumberFreeOnBus = [ 11, 32, 34, 45, 55 ]; //have green border

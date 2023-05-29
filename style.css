@@ -181,7 +181,7 @@ color: grey;
   margin: 20px;
 
   display: grid;
-  grid-template: repeat(2, 1fr)/ repeat(6, 0.1fr);
+  grid-template: repeat(2, 1fr)/ repeat(6, 0.15fr);
   grid-gap: 10px;
 
 }
