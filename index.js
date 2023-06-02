@@ -3,30 +3,91 @@ let submit = document.getElementById("submit");
 const dateInput = document.getElementById("Date_trip");
 const selectStation = document.getElementById("Start_Station");
 const selectEndStation = document.getElementById("End_Station");
-let seat_13 = document.getElementById("seat_13")
-let seat_14 = document.getElementById("seat_14")
-
-seat_13.addEventListener('click', seat13)
-seat_14.addEventListener('click', seat14)
 
 
-const arrayOccupiedSeat = [];
+let seat_1 = document.getElementById("seat_1")
+let seat_2 = document.getElementById("seat_2")
+let seat_3 = document.getElementById("seat_3")
+let seat_4 = document.getElementById("seat_4")
+let seat_5 = document.getElementById("seat_5")
+let seat_6 = document.getElementById("seat_6")
+let seat_7 = document.getElementById("seat_7")
+let seat_8 = document.getElementById("seat_8")
+let seat_9 = document.getElementById("seat_9")
+let seat_10 = document.getElementById("seat_10")
+let seat_11 = document.getElementById("seat_11")
+let seat_12 = document.getElementById("seat_12")
 
 
 
-function seat13() {
-    console.log("occupied seat 13")
-    arrayOccupiedSeat.push(13)
+
+seat_1.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:1 , seatNum: seat_1});
+seat_2.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:2 , seatNum: seat_2});
+seat_3.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:3 , seatNum: seat_3});
+seat_4.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:4 , seatNum: seat_4});
+seat_5.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:5 , seatNum: seat_5});
+seat_6.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:6 , seatNum: seat_6});
+seat_7.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:7 , seatNum: seat_7});
+seat_8.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:8 , seatNum: seat_8});
+seat_9.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:9 , seatNum: seat_9});
+seat_10.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:10 , seatNum: seat_10});
+seat_11.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:11 , seatNum: seat_11});
+seat_12.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:12 , seatNum: seat_12});
+
+
+
+
+
+// seat_13.addEventListener('click', seat13)
+// seat_14.addEventListener('click', seat14)
+// seat_15.addEventListener('click', seat15)
+// seat_16.addEventListener('click', seat16)
+// seat_17.addEventListener('click', seat17)
+// seat_18.addEventListener('click', seat18)
+// seat_19.addEventListener('click', seat19)
+// seat_20.addEventListener('click', seat20)
+// seat_21.addEventListener('click', seat21)
+// seat_22.addEventListener('click', seat22)
+// seat_23.addEventListener('click', seat23)
+// seat_24.addEventListener('click', seat24)
+
+
+
+const arrayOccupiedSeat =[]
+
+function reservedSeat() {
+    console.log(this.resNumSeat)
+//    const arrayOccupiedSeat = []
+   arrayOccupiedSeat.push(this.resNumSeat)
+    console.log(arrayOccupiedSeat)
+
+    // Arr.push(this.resNumSeat)
+    // console.log(Arr)
+
+
+    this.seatNum.style.background = "lightgreen"
+    this.seatNum.style.border = "none"
+
+    return arrayOccupiedSeat
+
+
+   
+    
+
+}
+// console.log(arrayOccupiedSeat)
+
+
+function seat10() {
+    console.log("choose seat 10")
+    const arrayChooseSeat = []
+    arrayChooseSeat.push(10)
+    seat_10.style.background = "lightgreen"
+    seat_10.style.border = "none"
 }
 
-function seat14() {
-    console.log("occupied seat 14")
-    arrayOccupiedSeat.push(14)
-}
 
 
-
-console.log(arrayOccupiedSeat)
 
 
 
