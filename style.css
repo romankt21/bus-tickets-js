@@ -187,7 +187,6 @@ color: grey;
 }
 
 .wheel {
-  /* display: block; */
   margin-top: 20px;
 }
 
@@ -198,7 +197,17 @@ color: grey;
   cursor: pointer;
 }
 
+.occupiedSeat {
+  border: red solid 2 px;
+  background-color: blueviolet;
+  background: yellow;
+}
 
+.reserved {
+  background: grey;
+  border: none;
+  font-size: 25px;
+}
 
 
 
