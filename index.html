@@ -8,52 +8,41 @@
     <title>Bus tickets <i class="bi bi-bus-front-fill"></i></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.cdnfonts.com/css/dhaniel" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
-   
 </head>
-
 <body>
-  <h1>Bus tickets <i class="bi bi-bus-front-fill"></i></h1>
+    <h1>Bus tickets <i class="bi bi-bus-front-fill"></i></h1>
     <form class="form" id="submit" onsubmit={handleSubmit}>
         <h2>Registration for trips</h2>
-        
+
         <div class="station">
-            <select class="form-input" name="Start_Station"  id="Start_Station" placeholder="From">
-               
+            <select class="form-input" name="Start_Station" id="Start_Station" placeholder="From">
+
             </select>
             <button class="reverse"><i class="bi bi-arrow-left-right"></i></button>
 
-            <select class="form-input" name="End_Station"  id="End_Station" placeholder="From">
-             
-         </select>
+            <select class="form-input" name="End_Station" id="End_Station" placeholder="From">
 
-         <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip"  value="2023-05-12">
-         
-         <input type="number" class="form-input" name= "Passenger" placeholder="Passenger:" >
-         <button type="submit" class="form-submit"  >Submit</button>
-         
+            </select>
+
+            <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip"
+                value="2023-05-12">
+
+            <input type="number" class="form-input" name="Passenger" placeholder="Passenger:">
+            <button type="submit" class="form-submit">Submit</button>
+
         </div>
         <label for="">Return way</label>
-        <input type="checkbox" >
+        <input type="checkbox">
 
-        
 
-         <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-30" value="2023-05-30">
-         
-         <input type="number" class="form-input" name= "Passenger" placeholder="Passenger:" >
- 
-         
+
+        <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-30"
+            value="2023-05-30">
+
+        <input type="number" class="form-input" name="Passenger" placeholder="Passenger:">
+
         </div>
-        
-
-       
-        <label for="Name">First Name: <i class="bi bi-person-bounding-box"></i></label>
-        <input type="text" class="form-input name"  name="First_Name" placeholder="First Name" value="" required>
-
-        <input type="text" class=" form-input name" name="Last_Name" placeholder="Last name">
-
-        
         <hr>--------------------------------------------------</hr>
 
         <div class="bus-place">
@@ -68,74 +57,60 @@
                 <div class="occupied-seat"></div>
                 <p class="place">-зайняте</p>
             </div>
-
-
             <div class="bus-chair">
                 <div class="row12w">
-                    <div class="bus-chair-row12">
-                        <button type="button" id = "seat_21" class="seat">21</button>                       
-                        <button type="button" id = "seat_17" class="seat">17</button>                        
-                        <button type="button" id = "seat_13" class="seat">13</button>                       
-                        <button type="button" id = "seat_9" class="seat">9</button>                        
-                        <button type="button" id = "seat_5" class="seat">5</button>                        
-                        <button type="button" id = "seat_1" class="seat">1</button>                       
-                        <button type="button" id = "seat_22" class="seat">22</button>                       
-                        <button type="button" id = "seat_18" class="seat">18</button>                       
-                        <button type="button" id = "seat_14" class="seat">14</button>                        
-                        <button type="button" id = "seat_10" class="seat">10</button>                       
-                        <button type="button" id = "seat_6" class="seat">6</button>                        
-                        <button type="button" id = "seat_2" class="seat">2</button>                        
-                        
-                    </div>    
-               
-
-                    <img src = car_wheel.png class = " wheel" alt = " wheel" width="50px" height="50px">
-                 </div>
-
-                <div class="bus-chair-row12">
-                    <button type="button" id = "seat_23" class="seat reserved">23</button>
-                    <button type="button" id = "seat_19" class="seat reserved">19</button>
-                    <button type="button" id = "seat_15" class="seat reserved">15</button>
-                    <button type="button" id = "seat_11" class="seat reserved">11</button>
-                    <button type="button" id = "seat_7" class="seat reserved">7</button>
-                    <button type="button" id = "seat_3" class="seat reserved">3</button>
-                    <button type="button" id = "seat_24" class="seat reserved">24</button>
-                    <button type="button" id = "seat_20" class="seat reserved">20</button>
-                    <button type="button" id = "seat_16" class="seat reserved">16</button>
-                    <button type="button" id = "seat_12" class="seat reserved">12</button>
-                    <button type="button" id = "seat_8" class="seat reserved">8</button>
-                    <button type="button" id = "seat_4" class="seat reserved">4</button>
-                    
+                    <div class="bus-chair-row12" onclick="handleselectSeat">
+                        <button type="button" id="seat_21" class="seat">21</button>
+                        <button type="button" id="seat_17" class="seat">17</button>
+                        <button type="button" id="seat_13" class="seat">13</button>
+                        <button type="button" id="seat_9" class="seat">9</button>
+                        <button type="button" id="seat_5" class="seat">5</button>
+                        <button type="button" id="seat_1" class="seat">1</button>
+                        <button type="button" id="seat_22" class="seat">22</button>
+                        <button type="button" id="seat_18" class="seat">18</button>
+                        <button type="button" id="seat_14" class="seat">14</button>
+                        <button type="button" id="seat_10" class="seat">10</button>
+                        <button type="button" id="seat_6" class="seat">6</button>
+                        <button type="button" id="seat_2" class="seat">2</button>
+                    </div>
+                    <img src=car_wheel.png class=" wheel" alt=" wheel" width="50px" height="50px">
                 </div>
 
-            </div>    
+                <div class="bus-chair-row12">
+                    <button type="button" id="seat_23" class="seat reserved">23</button>
+                    <button type="button" id="seat_19" class="seat reserved">19</button>
+                    <button type="button" id="seat_15" class="seat reserved">15</button>
+                    <button type="button" id="seat_11" class="seat reserved">11</button>
+                    <button type="button" id="seat_7" class="seat reserved">7</button>
+                    <button type="button" id="seat_3" class="seat reserved">3</button>
+                    <button type="button" id="seat_24" class="seat reserved">24</button>
+                    <button type="button" id="seat_20" class="seat reserved">20</button>
+                    <button type="button" id="seat_16" class="seat reserved">16</button>
+                    <button type="button" id="seat_12" class="seat reserved">12</button>
+                    <button type="button" id="seat_8" class="seat reserved">8</button>
+                    <button type="button" id="seat_4" class="seat reserved">4</button>
 
-
+                </div>
 
             </div>
 
+
+            <label for="Name">First Name: <i class="bi bi-person-bounding-box"></i></label>
+            <input type="text" class="form-input name" name="First_Name" placeholder="First Name" value="" required>
+
+            <input type="text" class=" form-input name" name="Last_Name" placeholder="Last name">
 
 
         </div>
 
 
 
-
-
-
-
-
-        
-        
+        </div>
         <hr>--------------------------------------------------</hr>
-
-        
-
-
         <label for="">Have pet:</label>
-        <input type="checkbox" id="pet" placeholder="movie with pet"  class="form-input checkbox" >
+        <input type="checkbox" id="pet" placeholder="movie with pet" class="form-input checkbox">
         <label for="">Have baggage:</label>
-        <input type="checkbox" id="baggage" placeholder="have plus baggage?"  class="form-input checkbox" >
+        <input type="checkbox" id="baggage" placeholder="have plus baggage?" class="form-input checkbox">
         <select name="exemption" id="exemption">
 
             <option value="" disabled="disabled" selected="selected">Select from the options...</option>
@@ -144,7 +119,7 @@
             <option value="15%">disablement</option>
         </select>
 
-       
+        <button type="submit" class="date-submit">Submit</button>
     </form>
     <div class="cloud" id="cloud">
     </div>

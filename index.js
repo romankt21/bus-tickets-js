@@ -61,30 +61,30 @@ seat_24.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:24 , se
 submit.addEventListener('submit', handleSubmit); //listener events
 
 
-// const arrayfreeSeat =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-// for (i = 0; i < arrayfreeSeat.length; i++) {
-//     console.log(arrayfreeSeat[i])
-// }
+const totalSeat = 44; // depence
 
 
-const arrayOccupiedSeat =[];
+const arrayfreeSeat = [];  // 
+for(let i = 0; i < totalSeat; i++) {
+    // console.log(i)
+    arrayfreeSeat.push(i+1);
+    
+}
+console.log(arrayfreeSeat);
+
+// const choiseSeat = 11;  // вибране місце
+
+const reservS = arrayfreeSeat.splice(2, 1);
+
+const arrayOccupiedSeat = [];
 
 function reservedSeat() {
    arrayOccupiedSeat.push(this.resNumSeat);
    console.log(arrayOccupiedSeat)
-
-
-
     this.seatNum.classList.add("reserved");
     console.log(this.seatNum.classList);
-
-
-
-   
     return arrayOccupiedSeat;
 }
-
-
 
 
 //for date input
