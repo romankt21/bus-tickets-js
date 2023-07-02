@@ -5,6 +5,33 @@ const dateInput = document.getElementById("Date_trip");
 const selectStation = document.getElementById("Start_Station");
 const selectEndStation = document.getElementById("End_Station");
 
+
+const choosePlaces = document.querySelectorAll('.seat');
+console.log(choosePlaces);
+
+const handleClick = (event) => {
+    console.log(event.target.textContent)
+    console.log(event.target.id)
+}
+
+choosePlaces.forEach(choosePlace => {
+    choosePlace.addEventListener('click', handleClick)
+})
+
+
+const reservPlace = arrayfreeSeat.splice(2, 1);
+
+const arrayOccupiedSeat = [];
+
+function reservedSeat() {
+   arrayOccupiedSeat.push(this.resNumSeat);
+   console.log(arrayOccupiedSeat)
+    this.seatNum.classList.add("reserved");
+    console.log(this.seatNum.classList);
+    return arrayOccupiedSeat;
+}
+
+
 const seat_1 = document.getElementById("seat_1");
 const seat_2 = document.getElementById("seat_2");
 const seat_3 = document.getElementById("seat_3");
@@ -61,7 +88,7 @@ seat_24.addEventListener('click', {handleEvent: reservedSeat, resNumSeat:24 , se
 submit.addEventListener('submit', handleSubmit); //listener events
 
 
-const totalSeat = 44; // depence
+const totalSeat = 24; // depence
 
 
 const arrayfreeSeat = [];  // 
