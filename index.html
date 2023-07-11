@@ -1,3 +1,4 @@
+=
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +11,7 @@
     <link href="https://fonts.cdnfonts.com/css/dhaniel" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Bus tickets <i class="bi bi-bus-front-fill"></i></h1>
     <form class="form" id="submit" onsubmit={handleSubmit}>
@@ -17,30 +19,21 @@
 
         <div class="station">
             <select class="form-input" name="Start_Station" id="Start_Station" placeholder="From">
-
             </select>
             <button class="reverse"><i class="bi bi-arrow-left-right"></i></button>
-
             <select class="form-input" name="End_Station" id="End_Station" placeholder="From">
-
             </select>
-
             <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip"
-                value="2023-05-12">
-
+                value="2023-07-11">
             <input type="number" class="form-input" name="Passenger" placeholder="Passenger:">
             <button type="submit" class="form-submit">Знайти квиток</button>
-
         </div>
         <label for="">Return way</label>
         <input type="checkbox">
-
-
-
-        <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-30"
+        <!-- <input type="date" class="form-input" name="Date_trip" id="Date_trip" placeholder="Date trip" min="2023-05-30"
             value="2023-05-30">
 
-        <input type="number" class="form-input" name="Passenger" placeholder="Passenger:">
+        <input type="number" class="form-input" name="Passenger" placeholder="Passenger:"> -->
 
         </div>
         <hr>--------------------------------------------------</hr>
@@ -53,62 +46,42 @@
             <div class="discription-place">
                 <div class="free-seat"></div>
                 <p class="place">-вільне</p>
-                <label for="" class="labplace">вільн</label>
+                
                 <div class="occupied-seat"></div>
                 <p class="place">-зайняте</p>
             </div>
             <div class="bus-chair">
                 <div class="row12w">
-                    <div class="bus-chair-row12" >
-                    <!-- onclick="handleselectSeat"  -->
-                    
-                        <button type="button" id="seat_21" class="seat">21</button>
-                        <button type="button" id="seat_17" class="seat">17</button>
-                        <button type="button" id="seat_13" class="seat">13</button>
-                        <button type="button" id="seat_9" class="seat">9</button>
-                        <button type="button" id="seat_5" class="seat">5</button>
-                        <button type="button" id="seat_1" class="seat">1</button>
-                        <button type="button" id="seat_22" class="seat">22</button>
-                        <button type="button" id="seat_18" class="seat">18</button>
-                        <button type="button" id="seat_14" class="seat">14</button>
-                        <button type="button" id="seat_10" class="seat">10</button>
-                        <button type="button" id="seat_6" class="seat">6</button>
-                        <button type="button" id="seat_2" class="seat">2</button>
+                    <div class=" row-1-2">
+                    <div id = "bus_seat_row1" class="bus-chair-row12">
+                    </div>
+
+                    <div id = "bus_seat_row2" class="bus-chair-row12">
+                     
+                    </div>
                     </div>
                     <img src=car_wheel.png class=" wheel" alt=" wheel" width="50px" height="50px">
                 </div>
 
-                <div class="bus-chair-row12">
-                    <button type="button" id="seat_23" class="seat">23</button>
-                    <button type="button" id="seat_19" class="seat">19</button>
-                    <button type="button" id="seat_15" class="seat">15</button>
-                    <button type="button" id="seat_11" class="seat">11</button>
-                    <button type="button" id="seat_7" class="seat">7</button>
-                    <button type="button" id="seat_3" class="seat">3</button>
-                    <button type="button" id="seat_24" class="seat">24</button>
-                    <button type="button" id="seat_20" class="seat">20</button>
-                    <button type="button" id="seat_16" class="seat">16</button>
-                    <button type="button" id="seat_12" class="seat">12</button>
-                    <button type="button" id="seat_8" class="seat">8</button>
-                    <button type="button" id="seat_4" class="seat">4</button>
+                <div class="row12w">
+                    <div class=" row-1-2">
+                    <div id = "bus_seat_row3" class="bus-chair-row12">
+                    </div>
 
+                    <div id = "bus_seat_row4" class="bus-chair-row12">
+                     
+                    </div>
+                    </div>
+                   
                 </div>
-
             </div>
-
-
-            <label for="Name">First Name: <i class="bi bi-person-bounding-box"></i></label>
-            <input type="text" class="form-input name" name="First_Name" placeholder="First Name" value="" required>
-
-            <input type="text" class=" form-input name" name="Last_Name" placeholder="Last name">
-
-
+            <button type="submit" class="order-ticket" id="order-ticket">Оформити квитки</button>
         </div>
-
-
-
         </div>
         <hr>--------------------------------------------------</hr>
+        <label for="Name">Ім'я <i class="bi bi-person-bounding-box"></i></label>
+        <input type="text" class="form-input name" name="First_Name" placeholder="First_Name" value="" required>
+        <input type="text" class=" form-input name" name="Last_Name" placeholder="Last name">
         <label for="">Have pet:</label>
         <input type="checkbox" id="pet" placeholder="movie with pet" class="form-input checkbox">
         <label for="">Have baggage:</label>

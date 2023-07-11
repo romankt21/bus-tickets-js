@@ -1,0 +1,5 @@
+1. learning gitignore file and add file tasks.txt to ognore;
+2. And the end page show qr kod for scaning;
+table corection name
+array with 3 bus
+dinamic
