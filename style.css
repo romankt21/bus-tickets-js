@@ -177,7 +177,7 @@ color: grey;
   background-color: yellow;
   
 }
-.bus-chair-row12 {
+.bus-chair {
   
   background-color: aqua;
   height: 50px;
@@ -186,7 +186,7 @@ color: grey;
   margin: 20px;
 
   display: grid;
-  grid-template: repeat(1, 1fr)/ repeat(6, 0.15fr);
+  grid-template: repeat(1, 1fr)/ repeat(10, 0.15fr);
   grid-gap: 10px;
 
 }

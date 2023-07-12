@@ -1,5 +1,12 @@
-1. learning gitignore file and add file tasks.txt to ognore;
-2. And the end page show qr kod for scaning;
-table corection name
-array with 3 bus
-dinamic
+1. learning gitignore file and add file tasks.txt to ignore; +
+2. table corection name seat
+3. array with 3 bus and rundom select bus +-
+4. dinamic seats    +
+5. split content on same pages
+6. valid enter text to inputs
+
+
+
+
+. unit tests functions
+. And the end page show qr kod for scaning;
