@@ -39,22 +39,10 @@ choosePlaces.forEach(choosePlace => {
 submit.addEventListener('submit', handleSubmit); //listener events
 
 
-const totalSeat = 24; // depence
 
 
-const arrayfreeSeat = [];  // 
-for(let i = 0; i < totalSeat; i++) {
-    // console.log(i)
-    arrayfreeSeat.push(i+1); // for dinamic make layout and compaire with pccupied Array
-    
-}
-console.log("arrayfreeSeat", arrayfreeSeat);
 
-// const choiseSeat = 11;  // вибране місце
 
-const reservS = arrayfreeSeat.splice(2, 1);
-
-const arrayOccupiedSeat = [];
 
 //for date input
 const startLimitDate = new Date().toISOString().split('T')[0];
@@ -120,25 +108,6 @@ const stationsDB =  [
 
 
 
-const busesDB =  [
-    {
-        busBrand: "iveco",
-        numberOfSeats: 24,
-        id: "BC1122AA"
-    },
-
-    {
-        busBrand: "iveco",
-        numberOfSeats: 32,
-        id: "BC2233AA"
-    },
-
-    {
-        busBrand: "neoplan",
-        numberOfSeats: 40,
-        id: "BC3344AA"
-    },
-];
 
 
 
@@ -184,54 +153,108 @@ for(let stationEnd of stationsDB){
     selectEndStation.appendChild(optionEnd);
 }
 
+const busesDB =  [
+    {
+        busBrand: "iveco",
+        numberOfSeats: 24,
+        id: "BC1122AA"
+    },
+
+    {
+        busBrand: "iveco",
+        numberOfSeats: 32,
+        id: "BC2233AA"
+    },
+
+    {
+        busBrand: "neoplan",
+        numberOfSeats: 40,
+        id: "BC3344AA"
+    },
+];
+const totalSeat = 40;
+
+const arrayfreeSeatFirstRow = [];  // 
+for(let i = 0; i < totalSeat/2; i++) {
+    // console.log(i)
+    arrayfreeSeatFirstRow.push(i+1); // for dinamic make layout and compaire with pccupied Array
+const seat = document.createElement('button');  // split on 2 parts
+seat.textContent = i+1; // depense number seats
+const busSeats = document.querySelector(".bus-chair")
+busSeats.append(seat);
+// console.log("busSeats :", busSeats);
+
+}
+
+
+const arrayfreeSeatSecondRow = [];  // 
+for(let i = totalSeat/2 ; i < totalSeat; i++) {
+    // console.log(i)
+    arrayfreeSeatSecondRow.push(i+1); // for dinamic make layout and compaire with pccupied Array
+const seat = document.createElement('button');
+seat.addEventListener("click", () => console.log("click seat"))
+seat.textContent = i+1;
+const busSeats = document.querySelector(".bus-chair")
+busSeats.append(seat);
+console.log("busSeats :", busSeats);
+
+}
+
+console.log("arrayfreeSeatSecondRow", arrayfreeSeatSecondRow);
+
+// const choiseSeat = 11;  // вибране місце
+
+const reservS = arrayfreeSeatSecondRow.splice(2, 1);
+
+const arrayOccupiedSeat = [];
+
 
 // bus seat
 
-let bus_seat_row1 = document.getElementById("bus_seat_row1");
-let bus_seat_row2 = document.getElementById("bus_seat_row2");
-let bus_seat_row3 = document.getElementById("bus_seat_row3");
-let bus_seat_row4 = document.getElementById("bus_seat_row4");
+// let bus_seat_row1 = document.getElementById("bus_seat_row1");
+// let bus_seat_row2 = document.getElementById("bus_seat_row2");
+// let bus_seat_row3 = document.getElementById("bus_seat_row3");
+// let bus_seat_row4 = document.getElementById("bus_seat_row4");
 
-let arrBusSeatsRow12 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-for (let i = arrBusSeatsRow12.length-1; i >= 0; i--) {
-    if (arrBusSeatsRow12[i] % 2 !== 0)   {
-         let buttonSeat = document.createElement('button');
-        buttonSeat.classList.add('seat');
-        buttonSeat.setAttribute('id', `'seat' $arrBusSeatsRow12[i]`);
-        buttonSeat.innerText = arrBusSeatsRow12[i];
-        bus_seat_row1.append(buttonSeat)
-        }
+// let arrBusSeatsRow12 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+// for (let i = arrBusSeatsRow12.length - 1; i >= 0; i-- ) {
+//     if (arrBusSeatsRow12[i] % 2 !== 0)   {
+//          let buttonSeat = document.createElement('button');
+//         buttonSeat.classList.add('seat');
+//         buttonSeat.setAttribute('id', `'seat' $arrBusSeatsRow12[i]`);
+//         buttonSeat.innerText = arrBusSeatsRow12[i];
+//         bus_seat_row1.append(buttonSeat)
+//         }
         
-        else {
-            let buttonSeat = document.createElement('button');
-            buttonSeat.classList.add('seat');
-            buttonSeat.setAttribute('id', `'seat' $arrBusSeatsRow12[i]`);
-            buttonSeat.innerText = arrBusSeatsRow12[i];
-            bus_seat_row2.append(buttonSeat)
-        }
-}
+//         else {
+//             let buttonSeat = document.createElement('button');
+//             buttonSeat.classList.add('seat');
+//             buttonSeat.setAttribute('id', `'seat' $arrBusSeatsRow12[i]`);
+//             buttonSeat.innerText = arrBusSeatsRow12[i];
+//             bus_seat_row2.append(buttonSeat)
+//         }
+// }
 
 
-let arrBusSeatsRow34 = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+// let arrBusSeatsRow34 = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
-for (let i = arrBusSeatsRow34.length-1; i >= 0; i--) {
-    if (arrBusSeatsRow34[i] % 2 !== 0)   {
-         let buttonSeat34 = document.createElement('button');
-        buttonSeat34.classList.add('seat');
-        buttonSeat34.setAttribute('id', `'seat' $arrBusSeatsRow34[i]`);
-        buttonSeat34.innerText = arrBusSeatsRow34[i];
-        bus_seat_row3.append(buttonSeat34)
-        }
+// for (let i = arrBusSeatsRow34.length-1; i >= 0; i--) {
+//     if (arrBusSeatsRow34[i] % 2 !== 0)   {
+//          let buttonSeat34 = document.createElement('button');
+//         buttonSeat34.classList.add('seat');
+//         buttonSeat34.setAttribute('id', `'seat' $arrBusSeatsRow34[i]`);
+//         buttonSeat34.innerText = arrBusSeatsRow34[i];
+//         bus_seat_row3.append(buttonSeat34)
+//         }
         
-        else {
-            let buttonSeat34 = document.createElement('button');
-            buttonSeat34.classList.add('seat');
-            buttonSeat34.setAttribute('id', `'seat' $arrBusSeatsRow34[i]`);
-            buttonSeat34.innerText = arrBusSeatsRow34[i];
-            bus_seat_row4.append(buttonSeat34)
-        }
-}
-
+//         else {
+//             let buttonSeat34 = document.createElement('button');
+//             buttonSeat34.classList.add('seat');
+//             buttonSeat34.setAttribute('id', `'seat' $arrBusSeatsRow34[i]`);
+//             buttonSeat34.innerText = arrBusSeatsRow34[i];
+//             bus_seat_row4.append(buttonSeat34)
+//         }
+// }
 
 
 
